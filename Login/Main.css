@@ -1,0 +1,181 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #a20300;
+    font-family: "PT Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Cabeçalho */
+
+header.Cabecalho {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: white;
+}
+.Cab1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+.CabEsquerda, .CabCentral, .CabDireita{
+    display: flex;
+    flex: 1;
+}
+.CabEsquerda{
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.CabLink{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+.CabLink:hover{
+    text-decoration: underline;
+}
+.CabCentral{
+    justify-content: center;
+}
+.LogoApache{
+    max-height: 50px;
+}
+.CabDireita{
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.searchBar{
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+.inputProduct{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    flex: 1;
+    margin-left: 5px;
+}
+.searchBar button, .CabDireita button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+.searchBar img{
+    width: 20px;
+    height: 20px;
+}
+.CabDireita img {
+    width: 20px;
+    height: 20px;
+}
+.Cab2 {
+    padding: 10px 0;
+}
+.Cab2 nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.Cab2 nav ul li {
+    margin: 0 15px;
+}
+.Cab2 nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+.Cab2 nav ul li a:hover {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+
+/* Main */
+
+.MainMerch {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: calc(100vh - 60px); /* Altura restante após o cabeçalho */
+    overflow: hidden; /* Evita rolagem */
+}
+
+.DivMainMerch {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.DivMainMerch img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz com que a imagem preencha a tela sem distorção */
+    opacity: 0;
+    animation: slideShow 9s infinite;
+}
+
+.DivMainMerch img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.DivMainMerch img:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.DivMainMerch img:nth-child(3) {
+    animation-delay: 6s;
+}
+
+@keyframes slideShow {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    33.33% { opacity: 1; }
+    43.33% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Nova div para o texto e o link */
+.LegMainMerch {
+    position: absolute;
+    bottom: 0; /* Posiciona na parte inferior da imagem */
+    left: 0;
+    width: 100%;
+    padding: 20px; /* Espaçamento interno */
+    background-image: linear-gradient(to right, black,rgba(0,0,0,0)50%);
+    /*background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    color: white; /* Cor do texto */
+    text-align: left;
+    box-sizing: border-box; /* Inclui o padding no tamanho total da div */
+}
+
+.LegMainMerch p {
+    margin: 0;
+    font-size: 2em; /* Tamanho do texto */
+}
+
+.LegMainMerch a {
+    margin-top: 10px;
+    font-size: 1.5em; /* Tamanho do link */
+    text-decoration: underline; /* Remove o sublinhado */
+    color: white; /* Cor do link */
+    border-radius: 5px;
+}

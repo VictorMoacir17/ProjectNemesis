@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-Vindo - Apache</title>
+    <link rel="stylesheet" href="TelaCadastro.css">
+</head>
+<body>
+    <div class="box"> <!-- Todo Conteudo da pagina -->
+        <img src="img/LogoApache1.png" alt="">
+        <h1>Bem-Vindo a Eternidade</h1>
+        <p><b>Cadastre-se para receber Newsletters e mais!</b></p>
+        <form action=""> <!-- Formulario-->
+            <div class="inputBox"> <!-- Cada Div "inputBox" dentro do form representa uma linha do formulario-->
+            <input type="text" name="nome" class="inputUser">
+            <label for="nome" class="labelInput">Nome Completo</label>
+            </div>
+            <br>
+            <div class="inputBox"> <!-- Linha 2-->
+                <input type="email" name="email" class="inputUser">
+                <label for="email" class="labelInput">E-Mail</label>
+            </div>
+            <br>
+            <div class="inputBox"> <!-- Linha 3-->
+                <input type="password" name="senha" class="inputUser">
+                <label for="senha" class="labelInput">Senha</label>
+            </div>
+            <br>
+            <div class="inputBox"> <!-- Linha 4 - fim das linhas de formulario-->
+                <input type="password" name="confirmarsenha" class="inputUser">
+                <label for="confirmarsenha" class="labelInput">Confirme a Senha</label>
+            </div>
+            <br>
+            <input type="submit" name="submit" id="submit" value="Cadastrar"></input> <!-- botão de enviar-->
+            <p class="separator">Ou</p>
+            <a href="TelaLogin.html"><b>Login</b></a> <!-- Ir para pag de login-->
+        </div>
+        </form>
+
+    </div>
+</body>
+</html>
